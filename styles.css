@@ -6,8 +6,10 @@ body {
 .design-thinking-diagram {
     position: relative;
     margin: 50px auto;
-    width: 500px;
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    height: 0;
+    padding-bottom: 100%;
     border-radius: 50%;
     background-color: white;
     border: 2px solid #dee2e6;
@@ -22,8 +24,8 @@ body {
 
 .step {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 20%;
+    height: 20%;
     border-radius: 50%;
     background-color: #f8f9fa;
     display: flex;
@@ -36,18 +38,18 @@ body {
 }
 
 .step .icon {
-    font-size: 24px;
+    font-size: 1.5rem;
     color: #6c757d;
 }
 
 .step .title {
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: bold;
     margin-top: 10px;
 }
 
 .step .description {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #6c757d;
     display: none;
 }
@@ -57,7 +59,7 @@ body {
 }
 
 .empathize {
-    top: 10%;
+    top: 5%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -75,7 +77,7 @@ body {
 }
 
 .prototype {
-    top: 90%;
+    top: 95%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -94,11 +96,31 @@ body {
 
 @media (max-width: 768px) {
     .design-thinking-diagram {
-        width: 100%;
-        height: auto;
+        width: 90%;
+        padding-bottom: 90%;
     }
     .step {
-        width: 80px;
-        height: 80px;
+        width: 25%;
+        height: 25%;
+    }
+}
+
+@media (max-width: 576px) {
+    .design-thinking-diagram {
+        width: 100%;
+        padding-bottom: 100%;
+    }
+    .step {
+        width: 30%;
+        height: 30%;
+    }
+    .step .icon {
+        font-size: 1rem;
+    }
+    .step .title {
+        font-size: 0.8rem;
+    }
+    .step .description {
+        font-size: 0.65rem;
     }
 }
